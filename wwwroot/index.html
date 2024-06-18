@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseFeed</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/unpoly@2.8.0/dist/unpoly.min.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PulseFeed</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item loginButton">
+                        <a class="nav-link" hx-get="/login-form" hx-target=".replace" aria-current="page">login</a>
+                    </li>
+                    <li class="nav-item d-none logoutNav">
+                        <a class="nav-link" hx-get="/logout" hx-target=".replace" aria-current="page">logout</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="replace" hx-get="/feed" hx-trigger="load">
+
+    </div>
+
+    <footer>
+        <div class="footer" id="footer">
+        </div>
+        <div class="footerBottom d-flex justify-content-center">
+            <h4>Copyright &copy;2024 Designed by <span class="designer">Amira El-Garf</h4>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Unpoly JS -->
+    <script src="https://unpkg.com/unpoly@2.8.0/dist/unpoly.min.js"></script>
+</body>
+</html>

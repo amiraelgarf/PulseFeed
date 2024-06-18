@@ -1,0 +1,22 @@
+﻿body {
+    background: light grey;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+.wrapper h3{
+    text-align:center;
+    font-size: 36px;
+}
+.wrapper pragraph{
+    text-align:left;
+}
+
+.wrapper-feed{
+
+}
