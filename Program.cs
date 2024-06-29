@@ -104,8 +104,7 @@ app.MapPost("/register", async (HttpContext context, IDbConnection db, IAntiforg
 {
     var email = context.Request.Form["Email"];
     var password = context.Request.Form["Password"];
-    Console.WriteLine($"Email: {email}");
-    Console.WriteLine($"Password: {password}");
+    
     await antiforgery.ValidateRequestAsync(context);
     using (var connection = new SqliteConnection(connectionString))
     {
@@ -125,8 +124,7 @@ app.MapPost("/login", async (HttpContext context, IDbConnection db, IAntiforgery
 {
     var email = context.Request.Form["Email"];
     var password = context.Request.Form["Password"];
-    Console.WriteLine($"Email: {email}");
-    Console.WriteLine($"Password: {password}");
+
     await antiforgery.ValidateRequestAsync(context);
     using (var connection = new SqliteConnection(connectionString))
     {
@@ -170,12 +168,12 @@ async Task<bool> IsValidRssFeed(string url)
     }
     catch (HttpRequestException e)
     {
-        Console.WriteLine($"HTTP error: {e.Message}");
+        
         return false;
     }
     catch (XmlException e)
     {
-        Console.WriteLine($"XML parsing error: {e.Message}");
+        
         return false;
     }
 }
